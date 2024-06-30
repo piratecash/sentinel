@@ -1,10 +1,6 @@
 # PirateCash Sentinel
 
-[![Build Status](https://travis-ci.org/dashpay/sentinel.svg?branch=master)](https://travis-ci.org/dashpay/sentinel)
-
-> An automated governance helper for Dash Masternodes.
-
-Sentinel is an autonomous agent for persisting, processing and automating Dash governance objects and tasks. It is a Python application which runs alongside the DashCore instance on each Dash Masternode.
+Sentinel is an autonomous agent for persisting, processing and automating PirateCash governance objects and tasks. It is a Python application which runs alongside the PirateCashCore instance on each PirateCash Masternode.
 
 ## Table of Contents
 - [Install](#install)
@@ -31,7 +27,7 @@ Make sure Python version 3.6.x or above is installed:
 
     python3 --version
 
-Make sure the local DashCore daemon running is at least version 0.15.0.
+Make sure the local PirateCashCore daemon running is at least version 0.15.0.
 
     $ piratecashd --version | head -n1
 
@@ -70,7 +66,7 @@ With all tests passing and crontab setup, Sentinel will stay in sync with pirate
 Configuration is done via environment variables. Example:
 
 ```sh
-$ RPCUSER=dash RPCPASSWORD=password RPCHOST=127.0.0.1 RPCPORT=19998 ./venv/bin/python bin/sentinel.py
+$ RPCUSER=piratecash RPCPASSWORD=password RPCHOST=127.0.0.1 RPCPORT=19998 ./venv/bin/python bin/sentinel.py
 ```
 
 A path to a `piratecash.conf` file can be specified in `sentinel.conf`:
@@ -93,11 +89,11 @@ To view debug output, set the `SENTINEL_DEBUG` environment variable to anything 
 
 ## Contributing
 
-Please follow the [DashCore guidelines for contributing](https://github.com/dashpay/dash/blob/master/CONTRIBUTING.md).
+Please follow the [PirateCashCore guidelines for contributing](https://github.com/piratecash/piratecash/blob/master/CONTRIBUTING.md).
 
 Specifically:
 
-* [Contributor Workflow](https://github.com/dashpay/dash/blob/master/CONTRIBUTING.md#contributor-workflow)
+* [Contributor Workflow](https://github.com/piratecash/piratecash/blob/master/CONTRIBUTING.md#contributor-workflow)
 
     To contribute a patch, the workflow is as follows:
 
@@ -111,4 +107,4 @@ Specifically:
 
 ## License
 
-Released under the MIT license, under the same terms as DashCore itself. See [LICENSE](LICENSE) for more info.
+Released under the MIT license, under the same terms as PirateCashCore itself. See [LICENSE](LICENSE) for more info.
