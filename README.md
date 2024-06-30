@@ -1,4 +1,4 @@
-# Dash Sentinel
+# PirateCash Sentinel
 
 [![Build Status](https://travis-ci.org/dashpay/sentinel.svg?branch=master)](https://travis-ci.org/dashpay/sentinel)
 
@@ -33,13 +33,13 @@ Make sure Python version 3.6.x or above is installed:
 
 Make sure the local DashCore daemon running is at least version 0.15.0.
 
-    $ dashd --version | head -n1
+    $ piratecashd --version | head -n1
 
 ### Install Sentinel
 
 Clone the Sentinel repo and install Python dependencies.
 
-    $ git clone https://github.com/dashpay/sentinel.git && cd sentinel
+    $ git clone https://github.com/piratecash/sentinel && cd sentinel
     $ virtualenv -p $(which python3) ./venv
     $ ./venv/bin/pip install -r requirements.txt
 
@@ -63,7 +63,7 @@ Test the config by running tests:
 
     $ ./venv/bin/py.test ./test
 
-With all tests passing and crontab setup, Sentinel will stay in sync with dashd and the installation is complete
+With all tests passing and crontab setup, Sentinel will stay in sync with piratecashd and the installation is complete
 
 ## Configuration
 
@@ -73,10 +73,10 @@ Configuration is done via environment variables. Example:
 $ RPCUSER=dash RPCPASSWORD=password RPCHOST=127.0.0.1 RPCPORT=19998 ./venv/bin/python bin/sentinel.py
 ```
 
-A path to a `dash.conf` file can be specified in `sentinel.conf`:
+A path to a `piratecash.conf` file can be specified in `sentinel.conf`:
 
     # warning: deprecated
-    dash_conf=/path/to/dash.conf
+    dash_conf=/path/to/piratecash.conf
 
 This is now deprecated and will be removed in a future version. Users are encouraged to update their configurations to use environment variables instead.
 

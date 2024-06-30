@@ -19,7 +19,7 @@ from scheduler import Scheduler
 import argparse
 
 
-# sync dashd gobject list with our local relational DB backend
+# sync piratecashd gobject list with our local relational DB backend
 def perform_dashd_object_sync(dashd):
     GovernanceObject.sync(dashd)
 
@@ -115,12 +115,12 @@ def main():
 
     # check dashd connectivity
     if not is_dashd_port_open(dashd):
-        print("Cannot connect to dashd. Please ensure dashd is running and the JSONRPC port is open to Sentinel.")
+        print("Cannot connect to piratecashd. Please ensure piratecashd is running and the JSONRPC port is open to Sentinel.")
         return
 
-    # check dashd sync
+    # check piratecashd sync
     if not dashd.is_synced():
-        print("dashd not synced with network! Awaiting full sync before running Sentinel.")
+        print("piratecashd not synced with network! Awaiting full sync before running Sentinel.")
         return
 
     # ensure valid masternode
